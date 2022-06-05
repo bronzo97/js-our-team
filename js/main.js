@@ -1,3 +1,6 @@
+const teamContainer = document.querySelector('.team-container');
+
+
 const team = [
     {
         img: '<img src="img/new-team-member-02.jpg">',
@@ -33,6 +36,30 @@ const team = [
 
 for (let i = 0; i < team.length; i++) {
     const worker = team[i];
+
+
+    // let newDiv = document.createElement("div");
+    // newDiv.classList.add("team-card");
+    // teamContainer.append(newDiv);
+
+    teamContainer.innerHTML += `
+    <div class="team-card">
+        <div class="card-image">
+        ${worker.img}
+        </div>
+        <div class="card-text">
+            <h3>${worker.nameSurname}</h3>
+            <p>${worker.position}</p>
+        </div>
+    </div>
+`
+    // const teamCard = document.querySelector('.team-card');
+    // // let newDivImg = document.createElement("div");
+    // teamCard.innerHTML = `<div class="card-image"></div>`;
+    // // newDivImg.classList.add("card-image");
+    // // teamCard.appendChild(newDivImg);
+
+
 
     console.log(worker.img, worker.nameSurname, worker.position);
 
